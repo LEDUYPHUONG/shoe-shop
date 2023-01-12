@@ -98,6 +98,7 @@ export default function Carts() {
     });
     dispatch(setCartListing(cartListCopy));
     setStoreJson(CART_LIST, cartListCopy);
+    // eslint-disable-next-line
   }, [checkedState]);
 
   const renderProductCarts = () => {

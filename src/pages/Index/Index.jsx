@@ -20,6 +20,7 @@ export default function Index() {
   useEffect(() => {
     const actionApi = getProductApi();
     dispatch(actionApi);
+    // eslint-disable-next-line
   },[])
 
   const renderProduct = () => {

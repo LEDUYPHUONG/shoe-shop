@@ -18,6 +18,7 @@ export default function Detail() {
   useEffect(() => {
     let { id } = params;
     dispatch(getProductDetailApi(id));
+    // eslint-disable-next-line
   }, [params.id]);
 
   const renderSizeShoe = () => {

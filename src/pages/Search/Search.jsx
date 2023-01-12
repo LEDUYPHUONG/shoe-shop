@@ -31,6 +31,7 @@ export default function Search(props) {
   useEffect(() => {
     // Khi từ khóa có giá trị thì mới chạy
     getProductByKeyword();
+    // eslint-disable-next-line
   }, [keywordRef.current]);
 
   const handleChange = (e) => {
