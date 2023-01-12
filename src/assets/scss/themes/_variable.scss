@@ -1,0 +1,146 @@
+
+// biến,mixin,extend
+
+// color-text (component)
+    //(HeaderHome)
+$C-text-primary: #000000;
+$C-text-white: #FFFFFF;
+$C-text-samewhite: #F6F6F6;//login-register
+$C-text-gray: #CBC9C9;//(item product)
+
+    // (search)(login)
+$C-text-samegray: rgba(0, 0, 0, 0.6);//search
+$C-text-samesamegray: rgba(0, 0, 0, 0.6);//price
+$C-text-blue: #152AEB;//register now
+    // (profile)
+$C-text-samesamewhite: #FFFEFE;//profile
+$C-text-pink: #DD2AED;//profile
+$C-text-violet: #4200FF;//profile
+$C-text-pink-lineGradien: linear-gradient(#CB0DC3, #7D0DB1);//profile
+    //(detail)
+$C-text-red: #FB0B0B;//heart 
+$C-text-sizeShoe: #1ED90E;//heart 
+$C-text-numbersize: #1E1D1D;
+$C-text-price: #FC0303;
+$C-text-addtocarts: #FFF8F8;
+// font 
+    // size 12, 14, 16, 18, 20, 24, 30, 32,  40
+$f-size-m: 12px;
+$f-size-sm: 14px;
+$f-size-ssm: 16px;
+$f-size-sssm: 18px;
+$f-size-b: 20px;
+$f-size-sb: 24px;
+$f-size-ssb: 30px;
+// $f-size-ssb: 32px;
+$f-size-sssb: 40px;
+    // weight
+$f-weight-m: 300;
+$f-weight-sm: 400;
+$f-weight-ssm: 500;
+$f-weight-sssm: 600;
+$f-weight-b: 700;
+$f-weight-sb: 800;
+$f-weight-ssb: 900;
+    // font-family
+$f-family-primary: 'Inter';
+$f-family-Second: 'Roboto';
+
+// background
+    // headerHome
+$bg-header: #000000;
+$bg-body: #F5F5F5; //body, next-prev
+$bg-white: #ffffff;
+$bg-footer: #D9D9D9;
+$bg-button-buynow-carousel: #F8B653;//carousel 
+$bg-button-buynow-buy: #E1B067;//item-product
+$bg-button-buynow-price: #DEDDDC;//item-product 
+$bg-item-product: #F8F8F8;//item-product
+$bg-next-prev-carousel: rgba(0, 0, 0, 0.24);
+    //search
+$bg-input: rgba(33, 33, 33, 0.08);//input-search-price
+
+    // login
+$bg-button-login: #6200EE;//login
+$bg-button-Fb: #1877F2;//continue with FB#EB5757
+    // carts
+$bg-button-carts-delete: #EB5757;//delete 
+$bg-button-carts-submit: #F2994A;//submit oder
+    // detail
+$bg-button-addtocarts:  linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);//add to carts
+$bg-button-numbershoes: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);;//add to carts
+$bg-button-sizeshoes: #CCCCCC;
+
+@mixin text($f-fam:$f-family-primary,$f-styt:normal,$f-wei:$f-weight-sm,
+$f-size:$f-size-sb,$line-heig:29px,$color:$C-text-primary,
+$backgr-color:$bg-white) {
+    font-family: $f-fam;
+    font-style: $f-styt;
+    font-weight: $f-wei;
+    font-size: $f-size;
+    line-height: $line-heig;
+    color: $color;
+    background-color: $backgr-color;
+}
+// button home: carousel, item, 
+@mixin button-1($width: 150px,$height: 50px,$backgr:$bg-button-buynow-carousel,$boder:none,$br-radius:0px,
+$padding: 13px 35px,$margin:0px) {
+    width: $width ;
+    height: $height;
+    background-color: $backgr;
+    border: $boder;
+    border-radius: $br-radius;
+    padding: $padding;
+    margin: $margin;
+    text-align: center;
+}
+// button search: search, login fb, update profile, 
+// button register: submit
+@mixin button-2($width: 121px,$height: 48px,$backgr:$bg-button-login,$boder:none,$br-radius:50px,
+$padding: 0,$margin:0px
+,$box-shadow:(0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2))) {
+    @include text($f-fam:$f-family-Second,
+                        $f-wei:$f-weight-ssm,
+                        $f-size:$f-size-sm,$line-heig:16px);
+    width: $width ;
+    height: $height;
+    background-color: $backgr;
+    border: $boder;
+    border-radius: $br-radius;
+    padding: $padding;
+    margin: $margin;
+    box-shadow: $box-shadow;
+    color: $bg-white;
+    
+}
+// button login: facebook
+@mixin button-3($max-width: 443px,$height: 63px,$backgr:$bg-button-Fb,$boder:none,$br-radius:20.9968px,
+$padding: 11px 40px,$margin:0px,
+$box-shadow:(0px 38.4869px 71.4756px rgba(0, 0, 0, 0.07))) {
+    max-width: $max-width ;
+    height: $height;
+    background-color: $backgr;
+    border: $boder;
+    border-radius: $br-radius;
+    padding: $padding;
+    margin: $margin;
+    box-shadow: $box-shadow;
+    color: $bg-white;
+    font-size: $f-size-ssm;
+}
+// button carts: button carts(edit, delete,submit)
+@mixin button-4($width: 150px,$height: 50px,$backgr:$bg-button-carts-submit,$boder:none,$br-radius:4px,
+$padding: 13px 35px,$margin:0px,
+$box-shadow:(0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2))) {
+    width: $width ;
+    height: $height;
+    background-color: $backgr;
+    border: $boder;
+    border-radius: $br-radius;
+    padding: $padding;
+    margin: $margin;
+    box-shadow: $box-shadow;
+    color:$C-text-white;
+    font-family: $f-family-Second;
+}
+

@@ -1,0 +1,54 @@
+.form-default{
+    margin: 0 auto;
+    .form-item-input{
+        border-top: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+        margin-top: 60px;
+        padding: 60px 0;
+        .form-item{
+            max-width: 443px;
+            height: 100px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            .form-item-title{
+                margin-bottom: 5px;
+            }
+
+            .span-danger{
+                .text-err{
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: #F50E0E;
+                }
+            }
+            .option-gender{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .option{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    input{
+                        width: 40px;
+                        height: 40px;
+                    }
+                    label{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .submit-button{
+        width: 100%;
+        height: 100px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 100px;
+        .button-submit{
+            @include button-2();
+        }
+        
+    }
+}

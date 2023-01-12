@@ -1,0 +1,164 @@
+.detail{
+    .container{
+        .detail-product{
+            height: 530px;
+            .product-info{
+                margin: 0 auto;
+                .product-info-inner{
+                    height: 530px;
+                    width: 100%;
+                    padding: 58px 0;
+                    .container{
+                        height: 530px;
+                        
+                        .product-img{
+                            .product-img-iner{
+                                max-width: 334px;
+                                height: 335px;
+                                background-color: $bg-item-product;
+                                img{
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                        .product-info{
+                            margin-left: 128px;
+                            .product-name{
+                                margin-bottom: 10px;
+                                .product-name-text{
+                                    @include text(
+                                    $f-fam:$f-family-primary,
+                                    $f-styt:normal,
+                                    $f-wei:$f-weight-m,
+                                    $f-size:$f-size-ssb,
+                                    $line-heig:36px,
+                                    $color:$C-text-primary,
+                                    $backgr-color:$bg-white,  
+                                    );
+                                    margin-bottom: 0;
+                                    
+                                }
+                            }
+                            .product-description{
+                                margin-bottom: 40px;
+                                .product-description-text{
+                                    @include text(
+                                    $f-fam:$f-family-primary,
+                                    $f-styt:normal,
+                                    $f-wei:$f-weight-sm,
+                                    $f-size:$f-size-ssm,
+                                    $line-heig:19px,
+                                    
+                                    $color:$C-text-primary,
+                                    $backgr-color:$bg-white, 
+                                    );
+                                    padding-bottom: 10px;
+                                }
+                                .available-size{
+                                    .available-size-text{
+                                        @include text(
+                                        $f-fam:$f-family-primary,
+                                        $f-styt:normal,
+                                        $f-wei:$f-weight-ssm,
+                                        $f-size:$f-size-sb,
+                                        $line-heig:29px,
+                                        
+                                        $color:$C-text-sizeShoe,
+                                        $backgr-color:$bg-white,  
+                                        );
+                                        padding-bottom: 10px;
+                                    }
+                                    .button-size{
+                                        button{
+                                            @include text($f-wei:$f-weight-sssm,
+                                            $f-size:$f-size-sb);
+                                            color: $C-text-numbersize;
+                                            @include button-1(
+                                                $width: 50px,
+                                                $height: 50px,
+                                                $backgr:$bg-button-sizeshoes,
+                                                $boder:none,
+                                                $br-radius:0px,
+                                                $padding: 10px,
+                                                $margin:0px
+                                            );
+                                            margin-right: 20px;
+                                            margin-bottom: 10px                                            
+                                        }
+                                    }
+                                    .price{
+                                        @include text($f-wei:$f-weight-sssm,
+                                        $f-size:$f-size-ssb,$line-heig:36px,$color:$C-text-price);
+                                        padding-bottom: 10px
+                                    }
+                                    .quantity{
+                                        .btnUp{
+                                            
+                                            @include button-1(
+                                                $width: 50px,
+                                                $height: 50px,
+                                                $boder:none,
+                                                $br-radius:0px,
+                                                $padding: 10px,
+                                                $margin:0px
+                                            );
+                                            background: $bg-button-numbershoes;
+                                            margin-right: 20px;
+                                            margin-bottom: 10px 
+                                        }
+                                        .number-shoes{
+                                            @include text($f-wei:$f-weight-sssm,
+                                            $f-size:$f-size-sb);
+                                            color: $C-text-numbersize;
+                                            margin-right: 20px;
+                                        }
+                                        .btnDown{
+                                            @extend .btnUp
+                                        }
+
+                                    }
+                                    .btnAddToCarts{
+                                        @include text($f-wei:$f-weight-ssm,
+                                        $f-size:$f-size-sb,$line-heig:29px,$color:$C-text-addtocarts);
+                                        @include button-1(
+                                            $width: 175px,
+                                            $height: 64px,
+                                            $boder:none,
+                                            $br-radius:0px,
+                                            $padding: 0,
+                                            $margin:0px,
+                                        );
+                                        background: $bg-button-addtocarts;
+                                    }
+                                }
+                            }
+                            .button-info{
+                                @include button-1();
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .title-realate-product{
+            @include text($f-wei:$f-weight-sm,
+            $f-size:$f-size-sssb,$line-heig:48px);
+            text-align: center;
+        }
+        .render-product-detail{
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 49px auto;
+                padding: 0 -15px;
+                justify-content: space-between;
+                align-items: center;
+                // .item-product{
+                    
+                // }
+            }
+        }
+    }
+}

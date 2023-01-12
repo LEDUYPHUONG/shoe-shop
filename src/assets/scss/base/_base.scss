@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; // font phụ
+    font-family: 'Inter', sans-serif; //font chính
+}
+
+a{
+    text-decoration: none;
+    color: $C-text-primary;
+}
+a:hover{
+    color: $C-text-primary;
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+}

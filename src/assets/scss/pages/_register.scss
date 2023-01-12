@@ -1,0 +1,24 @@
+.register{
+    background-color: $bg-body;
+    .container{
+        margin: 0 auto;
+        .register-title{
+            padding-top: 60px;
+            text-align: center;
+            
+            .register-title-text{
+                @include text($f-size:$f-size-sssb,$line-heig:48px,$backgr-color:$bg-body);
+                margin-bottom: 0;
+            }
+        }
+        .horizontal-line{
+            height: 1px;
+            background-color: $bg-button-buynow-price;
+            margin-bottom: 27px;
+        }
+        .register-container{
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+}

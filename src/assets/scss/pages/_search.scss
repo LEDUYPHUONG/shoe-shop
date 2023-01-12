@@ -1,0 +1,71 @@
+.container-search{
+    .search-SearchArea{
+        .container{
+            margin: 44px auto;
+            .search-text{ 
+                @include text($f-fam:$f-family-Second);
+                padding-top: 24px;
+                margin-bottom: 10px;
+            }
+            .search-menu{
+                display: flex;
+                align-items: center;
+                .search-button{
+                    width: 121px;
+                    height: 48px;
+                    margin-left: 10px;
+                    button{
+                        @include button-2();
+                        i{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container-search-result{
+        .search-result-table{
+            .search-title{
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 74px;
+                }
+                .search-title-text{
+                    position: absolute;
+                    top: 12px;
+                    left: 29px;
+                    @include text($f-wei:$f-weight-sm,$f-size:$f-size-sssb,
+                    $line-heig:48px,$backgr-color:none,$color:$C-text-white);
+                }
+            }
+            .container{
+                margin: 56px auto;
+                padding: 0 15px;
+                .search-price{
+                    max-width: 400px;
+                    .search-price-title{
+                        @include text($f-fam:$f-family-Second,$f-styt:normal,$f-wei:$f-weight-ssm,
+                        $f-size:$f-size-sssm,$line-heig:24px,);
+                    }
+
+                    .search-input-ascending{
+                        margin-top: 5px;
+                    }
+                }
+                .render-product-search{
+                    .container{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin: 49px auto;
+                        padding: 0 -15px;
+                        justify-content:space-evenly;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+    
+}

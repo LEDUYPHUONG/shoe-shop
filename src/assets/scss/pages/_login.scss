@@ -1,0 +1,81 @@
+.login{
+    background-color: $bg-body;
+    overflow: hidden;
+    min-height: 600px;
+    .login-container{
+        margin: 0 auto;
+        width: calc(1280px - 96*2px);
+        .login-title{
+            padding-top: 60px;
+            margin-bottom: 42px;
+            .login-title-text{
+                @include text($f-size:$f-size-sssb,$line-heig:48px,$backgr-color:$bg-body);
+            }
+        }
+        .horizontal-line{
+            height: 1px;
+            background-color: $bg-button-buynow-price;
+            margin-bottom: 27px;
+        }
+        .form-default{
+            width:  979px;
+            margin: 0 auto;
+            .form-item-container{
+                .form-item{
+                    max-width: 443px;
+                    height: 100px;
+                    margin: 0 auto;
+                    .form-item-title{
+                        padding-left: 5px;
+                        margin-bottom: 5px;
+                    }
+                    .span-danger{
+                        height: 16px;
+                        .text-err{
+                            font-size: 16px;
+                            line-height: 16px;
+                            color: #F50E0E;
+                        }
+                    }
+                    
+                }
+                .space-betwwen-form-item{
+                    height: 18px;
+                }
+            }
+        }
+        .register-now{
+            margin: 7px auto;
+            width: 443px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .register-now-question{
+                @include text($f-wei:$f-weight-ssm,
+                $f-size:$f-size-sssm,$line-heig:24px,$color:$C-text-blue,
+                $backgr-color:$bg-body);
+                padding-right: 27px;
+            }
+            .button-login{
+                @include button-2();
+            }
+        }
+        .login-with-facebook{
+            margin: 0 auto;
+            width: 443px;
+            padding-bottom: 16px;
+            .button-facebook-out{
+                @include button-3();
+                .button-facebook{
+                    
+                    i{
+                        width: 43px;
+                        height: 43px;
+                        font-size: 43px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

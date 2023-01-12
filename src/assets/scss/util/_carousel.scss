@@ -1,0 +1,86 @@
+.carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before{
+    margin: 0 5px;
+    display: inline-block;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    content: '';
+    
+}
+
+.carousel .control-prev.control-arrow:before {
+    border-right: 50px solid $bg-next-prev-carousel;
+}
+
+.carousel .control-next.control-arrow:before {
+    border-left: 50px solid $bg-next-prev-carousel;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+    background: $bg-white;
+}
+
+.carousel .carousel-status{
+    display: none;
+}
+
+.index-carousel{
+    .index-carousel-inner{
+        max-width: calc(100% - 140px);
+        margin: 0 auto;
+        .container{ 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .carousel-img{
+                min-width: 400px;
+                .carousel-img-iner{
+                    img{
+                       width: 100%;
+                       height: 100%;
+                       object-fit: cover;
+                    }
+                }
+            }
+            .carousel-info{
+                .product-name{
+                    margin-bottom: 10px;
+                    .product-name-text{
+                        @include text(
+                            $f-fam:$f-family-primary,
+                            $f-styt:normal,
+                            $f-wei:$f-weight-m,
+                            $f-size:$f-size-sssb,
+                            $line-heig:48px,
+                         
+                            $color:$C-text-primary,
+                            $backgr-color:$bg-white,
+                            
+                        );
+                        margin-bottom: 0;
+                        
+                    }
+                }
+                .product-description{
+                    margin-bottom: 40px;
+                    .product-description-text{
+                        @extend .product-name-text;
+                        font-weight: 300;
+                        font-size: 20px;
+                        line-height: 24px; 
+                    }
+                }
+                .button-carousel{
+                   @include button-1($width:auto);
+                   span{
+                    width: 150px;
+                    height: 50px;
+                    font-size: $f-size-b;
+                    font-weight: $f-weight-m;
+                    line-height: 24px;
+                    color: $C-text-white
+                   }
+                };
+            }
+        }
+    }
+}

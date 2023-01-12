@@ -1,0 +1,159 @@
+
+.profile{
+    .profile-img{
+        width: 575px;
+        height: 74px;
+        position: relative;
+        margin-top: 47px;
+        .profile-img-out{
+            width: 698px;
+            height: 74px;
+            // img{
+
+            // }
+        }
+        .profile-text{
+            position:absolute;
+            top:12px;
+            left:29px;
+            @include text();
+            font-size: 40px;
+            line-height: 48px;
+            background-color: transparent;
+            color: $bg-white ;
+
+        }
+    }
+    .profile-container{
+        margin: 0 auto;
+        padding: 26px 34px 13px 34px;
+        display: flex;
+        justify-content: space-between;
+        
+        .profile-avata{
+            width: 225px;
+            height: 225px;
+            // img{
+
+            // }
+        }
+        .form-default{
+           width:  979px;
+           margin: 0 auto;
+           
+        }
+
+    }
+    .horizontal-line{
+        height: 1px;
+        background-color: $bg-button-buynow-price;
+        margin: 0 54px;
+    }
+    .container-order-history-favourite{
+        margin: 0 54px;
+        .order-history-favourite{
+            .line-left-order-history{
+                width: 2px;
+                height: 62px;
+                background-color: $bg-button-buynow-price;
+                display: inline-block;
+                margin-top: 10px;
+                margin-bottom: -8px;
+            }
+            .order-history{
+                @include text($f-wei:$f-weight-sm,
+                $f-size:$f-size-ssb,$line-heig:39px,$color:$C-text-pink,);
+                padding-left: 32px;
+                padding-right: 45px;
+                
+            }
+            .line-between-order-history{
+                width: 2px;
+                height: 62px;
+                background-color: $bg-button-buynow-price;
+                display: inline-block;
+                margin-top: 10px;
+                margin-bottom: -8px;
+               
+            }
+            .line-right-order-history{
+                width: 2px;
+                height: 62px;
+                background-color: $bg-button-buynow-price;
+                display: inline-block;
+                margin-top: 10px;
+                margin-bottom: -8px;
+            }
+            .favourite{
+                @extend .order-history;
+                color: $C-text-primary ;
+            }
+            
+        }
+        .line-under-order-history-favourite{
+            width: 100%;
+            height: 1px;
+            background-color: $bg-button-buynow-price;
+            margin-top: 0;
+            width: 500px;
+        }
+    }
+    
+    
+    .render-order-history{
+        margin: 0 auto;
+        padding: 65px 100px;
+        .item-table{
+            margin-bottom: 100px;
+            .time-order{
+                @include text($f-size:$f-size-b,$line-heig:16px,
+                $color:$C-text-primary);
+                letter-spacing: 0.4px;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #CB0DC3 0%, #7D0DB1 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+
+            }
+        }
+
+        .quantity-table{
+            text-align: end;
+            .prev-icon-table{
+                width: 50px;
+                height: 40px;
+                @include text($f-size:$f-size-b,$line-heig:24px);
+                text-align: center;
+                background-color: $bg-footer;
+                border: none;
+                margin: 0 8px;
+                i{
+                text-align: center;
+
+                }
+            }
+            .number-table{
+                width: 50px;
+                height: 40px;
+                @include text($f-size:$f-size-b,$line-heig:24px);
+                text-align: center;
+                background-color: $bg-footer;
+                border: none;
+                margin: 0 8px;
+            }
+            .next-icon-table{
+                width: 50px;
+                height: 40px;
+                @include text($f-size:$f-size-b,$line-heig:24px);
+                text-align: center;
+                background-color: $bg-footer;
+                border: none;
+                margin: 0 8px;
+                i{
+                    text-align: center;
+
+                }
+            }
+        }
+    }
+}

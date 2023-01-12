@@ -1,0 +1,75 @@
+.table-default{
+    width: 100%;
+    .title-table{
+        height: 57px;
+        tr{
+            th{
+                @include text($f-size:$f-size-b,$line-heig:24px) ;
+                background-color: $bg-footer;
+                text-align: center;
+            }
+            .icon-check{
+                padding-left: 16px;
+                color: $bg-button-login;
+            }
+            .id{
+                
+            }
+        }
+    }
+    .row-table{
+        tr{
+            td{
+                @include text($f-size:$f-size-b,$line-heig:24px) ;
+                text-align: center;
+                line-height: 100px;
+            }
+            .checkbox{
+                padding-left: 16px;
+                .checkbox-out{
+                    input {
+                        
+                    }
+                }
+                
+            }
+            .img-product{
+                img{
+                    object-fit: cover;
+                }
+            }
+            .quantity-product{
+                button{
+                    width: 80px;
+                    height: 34px;
+                    @include text($f-size:$f-size-b,$line-heig:24px);
+                    text-align: center;
+                    background-color: $bg-footer;
+                    border: none;
+                }
+                .btnDown,.btnUp{
+                    @include button-4(
+                    $width: 40px,$height: 34px,$padding:0,
+                    $margin: 0 10px,
+                    $backgr:$bg-button-login);
+                   
+                }
+            }
+            .action-button{
+                text-align: end;
+                .btnEdit{
+                    @include button-4(
+                    $width: 80px,$height: 36px,$padding:0,
+                    $margin: 0 10px,
+                    $backgr:$bg-button-login);
+                }
+                .btnDelete{
+                    @include button-4(
+                    $width: 100px,$height: 36px,$padding:0,
+                    $margin: 0 10px,
+                    $backgr:$bg-button-carts-delete);
+                }
+            }
+        }
+    }
+}

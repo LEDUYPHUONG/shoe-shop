@@ -1,0 +1,37 @@
+.input-default{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg-button-sizeshoes;
+    padding: 10px;
+    border-radius: 5px;
+    i{
+        font-size: 20px;
+        margin: 0 5px;
+    }
+    input{
+        width: 100%;
+        border: none;
+        background: transparent;
+        &::placeholder{
+            @include text($f-fam:$f-family-Second
+            ,$f-wei:$f-weight-sm,$f-size:$f-size-ssm,$line-heig:24px,$backgr-color:$bg-input);
+            background: transparent;
+        }
+        &:focus-visible{
+        outline: none;
+        background: transparent;
+        
+        }
+    }
+    input:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0 50px $bg-button-sizeshoes inset;
+    }
+    input:-webkit-autofill{
+        -webkit-box-shadow: 0 0 0 50px $bg-button-sizeshoes inset;
+    } 
+    .eye-input{
+        font-size: 20px;
+        margin: 0 5px;
+    }
+}

@@ -1,0 +1,90 @@
+.item-product{
+    margin: 0 -15px;
+    .item-product-inner{
+        width: 334px;
+        height: 369px;
+        background-color: $bg-item-product;
+        position: relative;
+        overflow: hidden;
+        margin: 0 15px 49px 15px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        .product-img{
+            margin: 0 57px;
+            padding: 40px 0 30px 0;
+            overflow: hidden;
+            img{
+                width: 220px;
+                height: 156px;
+                object-fit: cover;
+            }
+        }
+        .product-name{
+            padding-left: 23px;
+            
+            .name{
+                @include text();
+                background-color: $bg-item-product;
+                margin-bottom: 0;
+                margin-bottom: 10px;
+                display: -webkit-box;
+                max-height: 58px;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: normal;
+                -webkit-line-clamp: 1;
+            }
+        }
+        .product-description{
+            padding-left: 23px;
+
+            .description{
+                @include text();
+                background-color: $bg-item-product;
+                margin-bottom: 0;
+                margin-bottom: 10px;
+                display: -webkit-box;
+                max-height: 58px;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: normal;
+                -webkit-line-clamp: 1;
+            }
+        }
+        .icon-heart{
+            position: absolute;
+            top: 30px;
+            right: 26px;
+            cursor: pointer;
+            i{
+                width: 41px;
+                height: 41px;
+                font-size: 41px;
+                color: $C-text-red;
+            }
+        }
+        .buton-buynow-price{
+            width: 335px;
+            height: 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .buton-buy-now{
+                @include button-1($width: 175px,$height: 64px);
+                span{
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+            }
+            .button-price{
+                @include button-1($width: 160px,$height: 64px,$backgr:$bg-button-buynow-price);
+                span{
+                    font-size: 24px;
+                    line-height: 40px;
+                    
+                }
+            }
+        }
+    }
+}

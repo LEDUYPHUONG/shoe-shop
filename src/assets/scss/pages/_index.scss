@@ -1,0 +1,30 @@
+// css of carousel >>> /util/_carousel.scss
+
+.index-product-feature{
+    .product-feature-img{
+        height: 74px;
+        position: relative;
+        
+        .product-feature-text{
+            position:absolute;
+            top:12px;
+            left:29px;
+            @include text();
+            font-size: 40px;
+            line-height: 48px;
+            background-color: transparent;
+            color: $bg-white ;
+        }
+    }
+    .render-product-index{
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 49px auto;
+            padding: 0 -15px;
+            justify-content: space-between;
+            align-items: center;
+            //css of item-product >>> /util/_itemProduct.scss
+        }
+    }
+}

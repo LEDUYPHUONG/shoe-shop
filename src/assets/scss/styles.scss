@@ -1,0 +1,26 @@
+// themes
+@import "./themes/variable";
+// base
+@import "./base/base";
+// component
+@import "./components/header";
+@import "./components/footer";
+// util
+@import "./util/itemProduct";
+@import "./util/carousel";
+@import './util/formDefault';
+@import './util/inputDefault';
+@import './util/tableDefault';
+// pages
+@import "./pages/carts";
+@import "./pages/detail";
+@import "./pages/index";
+@import "./pages/login";
+@import "./pages/profile";
+@import "./pages/register";
+@import "./pages/search";
+// responsive
+@import './responsive/responsive'
+
+
+

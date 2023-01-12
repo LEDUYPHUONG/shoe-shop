@@ -1,0 +1,82 @@
+// .nav-link{
+//     padding: 0 !important;
+//     margin-right: 24px !important;
+// }
+
+.HeaderHome-Container{
+    margin: 0  auto;
+    
+    .HeaderHome{
+        background-color: $bg-header;
+        padding: 10px 20px;
+        .HeaderHome-Header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 80px;
+                    }
+                    .logo-text{
+                        color: rgb(242, 153, 74);
+                        margin-left: 10px;
+                        font-size: 40px;
+                    }
+                }
+                .Search-Carts-Login-Rigister{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                                       
+                    .HeaderHome-Search{
+                        width: 33px;
+                        height: 32px;
+                        color: $C-text-white;
+             
+                        .iconSearch{
+                            font-size: 32px;
+                            line-height: 32px;
+                            
+                        }
+                    }
+                    .HeaderHome-TextSearch{
+                       
+                        @include text($f-fam:$f-family-primary,$f-styt:normal,$f-wei:$f-weight-m,
+                        $f-size:$f-size-ssb,$line-heig:36.31px,$color:$C-text-white,$backgr-color:$bg-header);
+                        margin-right: 10px;
+                    }
+                    .HeaderHome-IconGiohang{
+                        cursor: pointer;
+                        margin-left: 5px;
+                        @include text($f-fam:$f-family-primary,$f-styt:normal,$f-wei:$f-weight-m,
+                        $f-size:$f-size-ssm,$line-heig:19px,$color:$C-text-white,$backgr-color:$bg-header);
+                        margin-left: 10px;
+                    }
+                    .HeaderHome-NumberCarts,.HeaderHome-Login,.HeaderHome-Register{
+                      
+                        @include text($f-fam:$f-family-primary,$f-styt:normal,$f-wei:$f-weight-m,
+                        $f-size:$f-size-ssm,$line-heig:19px,$color:$C-text-white,$backgr-color:$bg-header);
+                        margin-left: 10px;
+                    }
+                    
+                }
+        }
+    }
+    .navbar{
+        margin: 0 20px;
+        .navbar-collapse{
+            .navbar-nav{
+                .nav-item{
+                    .nav-link{
+                        padding: 0 ;
+                        margin-right: 24px ;
+                    }
+                }
+            }
+        }
+    }
+    
+}
