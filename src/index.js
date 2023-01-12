@@ -16,7 +16,7 @@ import Profile from './pages/Profile/Profile'
 import Register from './pages/Register/Register'
 import Search from './pages/Search/Search'
 import '../src/assets/scss/styles.scss'
-import AdminPage from './pages/AdminPage/AdminPage';
+import AdminTemplate from './templates/AdminTemplate'
 
 export const history = createBrowserHistory({ window });
 const container = document.getElementById('root');
@@ -36,8 +36,8 @@ root.render(
             <Route path='register' element={<Register />}></Route>
             <Route path='search' element={<Search />}></Route>
             <Route path='*' element={<Navigate to=''/>}></Route>
-            <Route path='admin' element={<AdminPage />}></Route>
           </Route>
+          <Route path='admin' element={<AdminTemplate />}></Route>
         </Routes>
     </HistoryRouter>
   </Provider>

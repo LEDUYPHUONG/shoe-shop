@@ -44,6 +44,13 @@ export const config = {
       localStorage.removeItem(name);
     }
   },
+  logout: () => {
+    localStorage.removeItem(ACCESS_TOKEN);
+    localStorage.removeItem(USER_LOGIN);
+    localStorage.removeItem(CART_LIST);
+    history.push("/login");
+    window.location.reload();
+  },
   ACCESS_TOKEN: 'accessToken',
   USER_LOGIN: 'userLogin',
   CART_LIST: 'cartList',
@@ -60,6 +67,7 @@ export const {
   USER_LOGIN,
   CART_LIST,
   clearStore,
+  logout,
 } = config;
 
 const DOMAIN = 'https://shop.cyberlearn.vn/api';

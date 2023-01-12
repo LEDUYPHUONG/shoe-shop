@@ -1,0 +1,45 @@
+@media (max-width: 991px) {
+    #d-none-img-profile-under-991px {
+      display: none !important;
+    }
+    .d-none-under-991px {
+      display: none !important;
+    }
+    .width100-under-991px {
+      width: 100px !important;
+    }
+    .text-center-under-991px {
+      text-align: center !important;
+    }  
+  
+}
+  
+@media (max-width: 768px) {
+    .Dashboard{
+      width: 30px !important;
+      height: 30px !important;
+    }
+    .d-none-under-768px {
+      display: none !important;
+    }
+    .isHidden-admin-navbar-body{
+      display: none !important;
+    }
+    .admin-navbar-body{
+      position: absolute;
+      z-index: 12;
+    }
+    .widthfull-under-991px {
+      width: 100% !important;
+    }
+    .out-admin-page{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% + 30px);
+      background-color: #cccccc;
+      opacity: 0.5;
+      z-index: 11;
+    }
+}
