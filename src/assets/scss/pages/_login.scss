@@ -60,22 +60,5 @@
                 @include button-2();
             }
         }
-        .login-with-facebook{
-            margin: 0 auto;
-            width: 443px;
-            padding-bottom: 16px;
-            .button-facebook-out{
-                @include button-3();
-                .button-facebook{
-                    
-                    i{
-                        width: 43px;
-                        height: 43px;
-                        font-size: 43px;
-                        vertical-align: middle;
-                    }
-                }
-            }
-        }
     }
 }

@@ -2,11 +2,9 @@ import React from "react";
 import {useFormik} from 'formik';
 import * as Yup from 'yup'
 import { useDispatch } from "react-redux";
-import { loginApi, loginFacebook } from "../../redux/reducers/userReducer";
+import { loginApi } from "../../redux/reducers/userReducer";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
-// import FacebookLogin from 'react-facebook-login'; this is button login faccebook default
 
 export default function Login(props) {
   const [showPassWord,setShowPassword] = useState(true)
@@ -25,10 +23,6 @@ export default function Login(props) {
         dispatch(loginApi(values))
       }
   })
-
-  const responseFacebook = (response) => {
-    dispatch(loginFacebook(response.accessToken))
-  }
 
   return (
     <form className="login" onSubmit={frm.handleSubmit}>
@@ -72,21 +66,6 @@ export default function Login(props) {
           <NavLink to="/register"><span className="register-now-question">Register now ?</span></NavLink>
           <button className="button-login" type="submit">LOGIN</button>
         </div>
-        <div className="login-with-facebook">     
-          <FacebookLogin
-            appId="1135304574089308"
-            autoLoad={false}
-            fields="name,email,picture"
-            render={renderProps => (
-                <button onClick={renderProps.onClick} className="border-0 button-facebook-out">
-                  <span className="button-facebook">
-                    <i className="fa-brands fa-facebook"></i> Continue with Facebook
-                  </span>
-              </button>
-            )}
-            callback={responseFacebook} />
-        </div>
-        
       </div>
     </form>
   );
