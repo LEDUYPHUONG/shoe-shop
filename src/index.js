@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { store } from './redux/configStore';
@@ -19,11 +18,9 @@ import Search from './pages/Search/Search'
 import '../src/assets/scss/styles.scss'
 import AdminPage from './pages/AdminPage/AdminPage';
 
-//cấu hình history (chuyển hướng không cần hook navigate)
 export const history = createBrowserHistory({ window });
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <Provider store={store}>
       <HistoryRouter history={history}>
         <Routes>
@@ -42,6 +39,6 @@ root.render(
           </Route>
         </Routes>
     </HistoryRouter>
-  </Provider>
+  </Provider>,
+  document.getElementById('root')
 );
-reportWebVitals();
