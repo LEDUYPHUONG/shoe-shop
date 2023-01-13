@@ -1,56 +1,21 @@
 
 .profile{
-    .profile-img{
-        width: 575px;
-        height: 74px;
-        position: relative;
-        margin-top: 47px;
-        .profile-img-out{
-            width: 698px;
-            height: 74px;
-            // img{
-
-            // }
-        }
-        .profile-text{
-            position:absolute;
-            top:12px;
-            left:29px;
-            @include text();
-            font-size: 40px;
-            line-height: 48px;
-            background-color: transparent;
-            color: $bg-white ;
-
-        }
-    }
-    .profile-container{
-        margin: 0 auto;
-        padding: 26px 34px 13px 34px;
+    .container-info-user{
         display: flex;
-        justify-content: space-between;
-        
+        flex-direction: column;
         .profile-avata{
-            width: 225px;
-            height: 225px;
-            // img{
-
-            // }
+            margin: 0 auto;
+            padding-top: 60px;
+            img{
+                width: 225px;
+                height: 225px;
+            } 
         }
-        .form-default{
-           width:  979px;
-           margin: 0 auto;
-           
-        }
+    }
 
-    }
-    .horizontal-line{
-        height: 1px;
-        background-color: $bg-button-buynow-price;
-        margin: 0 54px;
-    }
-    .container-order-history-favourite{
-        margin: 0 54px;
+    .container-title-history{
+        margin: 0 auto;
+        padding: 20px 12px;
         .order-history-favourite{
             .line-left-order-history{
                 width: 2px;
@@ -88,22 +53,15 @@
                 @extend .order-history;
                 color: $C-text-primary ;
             }
-            
-        }
-        .line-under-order-history-favourite{
-            width: 100%;
-            height: 1px;
-            background-color: $bg-button-buynow-price;
-            margin-top: 0;
-            width: 500px;
+            i{
+                display: none;
+            }
         }
     }
     
     
-    .render-order-history{
-        margin: 0 auto;
-        padding: 65px 100px;
-        .item-table{
+    .container-table-history{
+        .table-responsive{
             margin-bottom: 100px;
             .time-order{
                 @include text($f-size:$f-size-b,$line-heig:16px,
@@ -113,7 +71,8 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
-
+                white-space: nowrap;
+                width: 100%;
             }
         }
 

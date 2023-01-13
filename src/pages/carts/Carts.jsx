@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setStoreJson, CART_LIST } from '../../util/tools';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setStoreJson, CART_LIST } from "../../util/tools";
 import {
   orderProducts,
   setCartListing,
-} from '../../redux/reducers/productReducer';
+} from "../../redux/reducers/productReducer";
 
 export default function Carts() {
   const { userLogin } = useSelector((state) => state.userReducer);
@@ -14,7 +14,7 @@ export default function Carts() {
   const dispatch = useDispatch();
 
   const deleteProductCarts = (product) => {
-    if (window.confirm('Bạn có muốn xóa sản phẩm không?')) {
+    if (window.confirm("Bạn có muốn xóa sản phẩm không?")) {
       const cartListCopy = JSON.parse(JSON.stringify(cartListing)); // copy to new array; use JSON parse for not change orgin array
       const matchpProductIndex = cartListCopy.findIndex((item) => {
         return item.id === product.id;
@@ -104,7 +104,7 @@ export default function Carts() {
   const renderProductCarts = () => {
     return (
       <>
-        <table className="table-default mb-5">
+        <table className="table-default mb-5 b-t b-light">
           <thead className="title-table">
             <tr>
               <th className="icon-check">
@@ -120,7 +120,7 @@ export default function Carts() {
               <th className="price">price</th>
               <th className="quantity">quantity</th>
               <th className="total">total</th>
-              <th>action</th>
+              <th className="action">action</th>
             </tr>
           </thead>
           <tbody className="row-table">
@@ -193,6 +193,7 @@ export default function Carts() {
             )}
           </tbody>
         </table>
+
       </>
     );
   };
@@ -216,23 +217,24 @@ export default function Carts() {
           orderDetail: orderDetailIds,
           email: userLogin.email,
           cartListing, // cái này dùng để lọc lại mảng sau khi đặt hàng thành công
-        }),
+        })
       );
     }
   };
 
   return (
     <div>
-      <div className="carts">
-        <div className="carts-container">
+      <form className="carts">
+        <div className="container">
           <div className="carts-title">
             <p className="carts-title-text">Carts</p>
           </div>
           <div className="horizontal-line"></div>
-          <form className="item-table">
-            <p className="time-order"></p>
+          <div className="table-responsive">
             {renderProductCarts()}
-            <div className="Submit-oder">
+            
+          </div>
+          <div className="Submit-oder">
               <button
                 className="btn btnSubmitOder"
                 type="submit"
@@ -241,9 +243,8 @@ export default function Carts() {
                 SUBMIT ODER
               </button>
             </div>
-          </form>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

@@ -26,20 +26,6 @@
     }
     .container-search-result{
         .search-result-table{
-            .search-title{
-                position: relative;
-                img{
-                    width: 100%;
-                    height: 74px;
-                }
-                .search-title-text{
-                    position: absolute;
-                    top: 12px;
-                    left: 29px;
-                    @include text($f-wei:$f-weight-sm,$f-size:$f-size-sssb,
-                    $line-heig:48px,$backgr-color:none,$color:$C-text-white);
-                }
-            }
             .container{
                 margin: 56px auto;
                 padding: 0 15px;

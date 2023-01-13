@@ -95,7 +95,16 @@
     .detail .container .detail-product .product-info .product-info-inner .container .product-info .product-description .available-size .quantity .number-shoes{
         margin: 0 10px;
     }
-    // register
+    // profile
+    .profile .container .order-history-favourite .order-history span, .profile .container .order-history-favourite .favourite span{
+        display: none;
+    }
+    .profile .container .order-history-favourite .order-history i, .profile .container .order-history-favourite .favourite i{
+        display: inline-block;
+    }
+    .profile .container .order-history-favourite .order-history, .profile .container .order-history-favourite .favourite{
+        padding: 0 20px;
+    }
 
     //login
     .login .login-container .form-default{

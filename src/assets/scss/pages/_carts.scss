@@ -1,9 +1,7 @@
 .carts{
     background-color: $bg-white;
     overflow: hidden;
-    .carts-container{
-        margin: 0 auto;
-        width: calc(1280px - 96*2px);
+    .container{
         .carts-title{
             padding-top: 60px;
             margin-bottom: 42px;
@@ -16,27 +14,18 @@
             background-color: $bg-button-buynow-price;
             margin-bottom: 27px;
         }
-        .item-table{
-            margin-bottom: 100px;
-            .time-order{
-                @include text($f-size:$f-size-b,$line-heig:16px,
-                $color:$C-text-primary);
-                letter-spacing: 0.4px;
-                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #CB0DC3 0%, #7D0DB1 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-
-            }
-            .Submit-oder{
-                text-align: end;
-                padding-top: 10px;
-                .btnSubmitOder{
-                    @include button-4(
-                    $width: 152px,$height: 31px,$padding:0,
-                    $margin: 0 10px,
-                    $backgr:$bg-button-carts-delete);
-                }
+        .table-responsive{
+            width: 100%;
+            max-width: 100%;
+        }
+        .Submit-oder{
+            padding-top: 10px;
+            text-align: end;
+            .btnSubmitOder{
+                @include button-4(
+                $width: 152px,$height: 31px,$padding:0,
+                $margin: 0 10px,
+                $backgr:$bg-button-carts-delete);
             }
         }
     }

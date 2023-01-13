@@ -1,5 +1,6 @@
 .table-default{
     width: 100%;
+    max-width: 100%;
     .title-table{
         height: 57px;
         tr{
@@ -7,13 +8,31 @@
                 @include text($f-size:$f-size-b,$line-heig:24px) ;
                 background-color: $bg-footer;
                 text-align: center;
+                min-width: 100px ;
+                
             }
             .icon-check{
                 padding-left: 16px;
                 color: $bg-button-login;
+                min-width: 50px;
             }
             .id{
-                
+                min-width: 50px;
+            }
+            .name{
+                min-width: 350px;
+            }
+            .price{
+                min-width: 80px;
+            }
+            .quantity{
+                min-width: 200px;
+            }
+            .total{
+                min-width: 80px;
+            }
+            .action{
+                min-width: 250px;
             }
         }
     }
@@ -23,6 +42,8 @@
                 @include text($f-size:$f-size-b,$line-heig:24px) ;
                 text-align: center;
                 line-height: 100px;
+                min-width: 50px !important ;
+                
             }
             .checkbox{
                 padding-left: 16px;

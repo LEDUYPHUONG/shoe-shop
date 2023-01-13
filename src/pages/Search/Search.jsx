@@ -110,9 +110,9 @@ export default function Search(props) {
       </div>
       <div className="container-search-result">
         <div className="search-result-table">
-          <div className="search-title">
+          <div className="color-range">
             <img src="./img/daymauindex.png" alt="..." />
-            <p className="search-title-text">Search result</p>
+            <p className="color-range-text">Search result</p>
           </div>
           <div className="container">
             <div className="search-price">
