@@ -105,6 +105,11 @@
     .profile .container .order-history-favourite .order-history, .profile .container .order-history-favourite .favourite{
         padding: 0 20px;
     }
+    .profile .container-title-history .order-history-favourite .line-left-order-history, 
+    .profile .container-title-history .order-history-favourite .line-between-order-history,
+    .profile .container-title-history .order-history-favourite .line-right-order-history {
+        height: 40px;
+    }
 
     //login
     .login .login-container .form-default{
@@ -229,6 +234,10 @@
     //detail
     .detail .container .detail-product{
         height: 900px;
+    }
+    //profile
+    .profile .container-table-history .table-responsive .time-order{
+       
     }
 }
 
