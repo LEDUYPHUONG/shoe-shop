@@ -83,7 +83,7 @@ export default function Register() {
                   <input type={showPassWord ? "password" : 'text'} placeholder="password" id="password" name="password" onChange={frm.handleChange} onBlur={frm.handleBlur}/>
                   <div className="eye-input">
                     <div className="eye">
-                      <i className={showPassWord ? "fa-solid fa-eye" : "fa-solid fa-eye-slash"} onClick={() =>{
+                      <i className={showPassWord ? "fa-solid fa-eye-slash" : "fa-solid fa-eye"} onClick={() =>{
                         setShowPassword(!showPassWord)
                       }}></i>
                     </div>
@@ -100,7 +100,7 @@ export default function Register() {
                   <input type={showPassWordCF ? 'password' : 'text'} placeholder="password confirm" id="passwordConfirm" name="passwordConfirm" onChange={frm.handleChange} onBlur={frm.handleBlur}/>
                   <div className="eye-input">
                     <div className="eye">
-                      <i className={showPassWordCF ? "fa-solid fa-eye" : "fa-solid fa-eye-slash"} onClick={() =>{
+                      <i className={showPassWordCF ? "fa-solid fa-eye-slash" : "fa-solid fa-eye"} onClick={() =>{
                         setShowPasswordCF(!showPassWordCF)
                       }}></i>
                     </div>
