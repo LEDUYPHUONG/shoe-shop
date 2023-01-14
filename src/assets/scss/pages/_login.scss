@@ -5,6 +5,7 @@
     .login-container{
         margin: 0 auto;
         width: calc(1280px - 96*2px);
+        padding: 10px;
         .login-title{
             padding-top: 60px;
             margin-bottom: 42px;
@@ -46,7 +47,6 @@
         }
         .register-now{
             margin: 7px auto;
-            width: 443px;
             display: flex;
             justify-content: flex-end;
             align-items: center;
